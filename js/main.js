@@ -39,14 +39,14 @@ setInterval(()=>{
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // NAV TOGGLE
-document.addEventListener("DOMContentLoaded", function () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const navToggle = document.queryselector("nav-toggle");
-  const nav = document.queryselector("nav");
+  const navToggle = document.getElementById("navToggle");
+  const nav = document.getElementById("mainNav");
 
   if (!navToggle || !nav) return;
 
-  navToggle.addEventListener("click", function () => {
+  navToggle.addEventListener("click", () => {
     nav.classList.toggle("open");
   });
 
