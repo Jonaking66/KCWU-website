@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenya Chemical Workers Union</title>
-  <meta name="description" content="KCWU — protecting workers' rights and safety in Kenya's chemical sector">
+  <title>Kenya Chemical and Allied Workers' Union</title>
+  <meta name="description" content="KCWU — protecting workers' rights and safety in Kenya's chemical sector since 1954">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
         <img src="images/logo.png" alt="KCWU Logo" class="site-logo">
-
-        <span class="brand-text">Kenya Chemical Workers Union</span>
+        <span class="brand-text">Kenya Chemical and Allied Workers' Union</span>
       </a>
       <nav id="mainNav" class="nav">
         <ul class="nav-list">
@@ -32,129 +35,153 @@
 
   <main>
 
-
     <!-- HERO SLIDER -->
     <section class="hero-slider">
-
       <div class="slider-wrapper">
 
-        <div class="slide active">
-            <img src="images/hero5.jpg" alt="Workers 5">
-          </div>
-
-        <div class="slide">
-          <img src="images/hero2.jpg" alt="Workers 2">
-        </div>
-
-        <div class="slide">
-          <img src="images/hero1.jpg" alt="Workers 1">
-        </div>
-
-        <div class="slide">
-          <img src="images/hero3.jpg" alt="Workers 3">
-        </div>
-
-          <div class="slide">
-            <img src="images/hero4.jpg" alt="Workers 4">
-          </div>
-
-        </div>
-
+        <div class="slide active"><img src="images/hero5.jpg" alt="Workers"></div>
+        <div class="slide"><img src="images/hero2.jpg" alt="Workers"></div>
+        <div class="slide"><img src="images/hero1.jpg" alt="Workers"></div>
+        <div class="slide"><img src="images/hero3.jpg" alt="Workers"></div>
+        <div class="slide"><img src="images/hero4.jpg" alt="Workers"></div>
 
         <div class="overlay"></div>
 
         <div class="hero-text">
-          <h1>Standing With Kenya’s Chemical Workers</h1>
-          <p>We negotiate fair wages, protect worker rights, and promote safety across the chemical industry.</p>
-          <a href="about.html" class="btn-primary">Learn more</a>
+          <div class="hero-badge">Est. 1954 · Nairobi, Kenya</div>
+          <h1>Standing With Kenya's Chemical Workers</h1>
+          <p>We negotiate fair wages, protect worker rights, and promote safety across the chemical and allied industries.</p>
+          <div class="hero-actions">
+            <a href="about.html" class="btn-primary">Learn More</a>
+            <a href="contact.html" class="btn-outline">Contact Us</a>
+          </div>
         </div>
 
-
-        <div class="button-active">
-        <button class="slide-btn prev">❮</button>
-        <button class="slide-btn next">❯</button>
-      </div>
+        <button class="slide-btn prev" aria-label="Previous slide">&#8249;</button>
+        <button class="slide-btn next" aria-label="Next slide">&#8250;</button>
 
         <div class="slider-dots">
           <span class="dot active-dot" data-slide="0"></span>
           <span class="dot" data-slide="1"></span>
           <span class="dot" data-slide="2"></span>
-          <span class="dot"data-slide="3"></span>
+          <span class="dot" data-slide="3"></span>
           <span class="dot" data-slide="4"></span>
         </div>
       </div>
     </section>
 
+    <!-- STAT STRIP -->
+    <div class="stat-strip">
+      <div class="container">
+        <div class="stat-item">
+          <div class="stat-number" data-target="70" data-suffix="+">0+</div>
+          <div class="stat-label">Years of Service</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12" data-suffix="">0</div>
+          <div class="stat-label">Branch Offices</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="50" data-suffix="+">0+</div>
+          <div class="stat-label">CBAs Negotiated</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="1000" data-suffix="s">0</div>
+          <div class="stat-label">Members Protected</div>
+        </div>
+      </div>
+    </div>
+
     <!-- CARDS -->
-    <section class="cards container">
+    <section class="cards container reveal-stagger">
       <article class="card">
+        <div class="card-icon">⚖️</div>
         <h3>Collective Bargaining</h3>
-        <p>Negotiate collective agreements and employers on better or fair pay and general terms and conditions of employment, such as better housing, general amenities, and safety to improve workers' individual and collective welfare.</p>
+        <p>We negotiate collective agreements with employers for fair pay, better housing, general amenities, and safety — improving workers' individual and collective welfare.</p>
       </article>
       <article class="card">
+        <div class="card-icon">🏛️</div>
         <h3>Legal Support</h3>
-        <p>Accompany workers in disciplinary and grievance meetings as provided for under the Employment Act, at conciliation meetings at the Ministry of Labour, and at the Employment and Labour Relations court matters.</p>
+        <p>We accompany workers in disciplinary hearings, conciliation at the Ministry of Labour, and at the Employment and Labour Relations Court.</p>
       </article>
       <article class="card">
+        <div class="card-icon">🛡️</div>
         <h3>Safety Training</h3>
-        <p>Empower, Train, and Educate Workers.</p>
+        <p>We empower, train, and educate workers on their rights and best practices, making every chemical industry workplace safer for all.</p>
       </article>
     </section>
 
     <!-- MISSION -->
-    <section class="mission container">
+    <section class="mission container reveal">
       <div class="mission-inner">
+        <div class="title-underline"></div>
         <h2 class="section-title">Our Mandate</h2>
-        <p>To safeguard all members rights through negotiations with  employers on Collective Bargaining Agreements, for better terms and conditions of employment, workers empowerment and enhancing good industrial relations.</p>
+        <p>To safeguard all members' rights through negotiations with employers on Collective Bargaining Agreements — securing better terms and conditions of employment, empowering workers, and enhancing good industrial relations.</p>
         <a href="about.html" class="mission-link">Read our full motto and vision</a>
       </div>
     </section>
 
     <!-- NEWS -->
-    <section class="news container">
-      <h2 class="section-title">News & Announcements</h2>
-      <div class="news-grid">
-        <article class="news-item">
-          <h4>National Delegate Congress</h4>
-          <p>These conferences are typically held periodically, and the specific timing would be communicated internally to their members and relevant stakeholders. </p>
-        </article>
-        <article class="news-item">
-          <h4>Safety Workshop</h4>
-          <p>Training series on chemical handling and PPE is rolling out across regions.</p>
-        </article>
-        <article class="news-item">
-          <h4>New CBA Signed</h4>
-          <p>We concluded a new agreement improving pay and shift patterns for members at Kenpoly (Oct 2025) and BOC Kenya (April 2025) .</p>
-        </article>
+    <section class="news" style="padding:50px 0;">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="title-underline"></div>
+          <h2 class="section-title">News &amp; Announcements</h2>
+          <p class="section-subtitle">Stay up to date with the latest from KCWU</p>
+        </div>
+        <div class="news-grid reveal-stagger">
+          <article class="news-item">
+            <div class="news-date">March 2026</div>
+            <h4>National Delegate Congress</h4>
+            <p>The 15th National Delegates Congress was held on 7th March 2026 at Luke Hotel, Nairobi. A milestone gathering for the union.</p>
+          </article>
+          <article class="news-item">
+            <div class="news-date">Ongoing</div>
+            <h4>Safety Workshop Series</h4>
+            <p>A training series on chemical handling and PPE is rolling out across all regions, ensuring worker safety at every level.</p>
+          </article>
+          <article class="news-item">
+            <div class="news-date">Oct 2025 &amp; Apr 2025</div>
+            <h4>New CBAs Signed</h4>
+            <p>New agreements improving pay and shift patterns were concluded for members at Kenpoly (Oct 2025) and BOC Kenya (Apr 2025).</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- RESOURCES -->
-    <section class="resources container">
-      <h2 class="section-title">Resources</h2>
+    <section class="resources container reveal">
+      <div class="section-header">
+        <div class="title-underline"></div>
+        <h2 class="section-title">Resources</h2>
+        <p class="section-subtitle">Download key documents from our library</p>
+      </div>
       <div class="resources-list">
-        <a class="resource" href="docs/sample-cba.pdf" target="_blank">CBA - Sample (PDF)</a>
+        <a class="resource" href="docs/sample-cba.pdf" target="_blank">CBA — Sample (PDF)</a>
         <a class="resource" href="docs/safety-guidelines.pdf" target="_blank">Safety Guidelines (PDF)</a>
-        <a class="resource" href="docs/membership-form.pdf" target="_blank" >Membership Form (PDF)</a>
+        <a class="resource" href="docs/membership-form.pdf" target="_blank">Membership Form (PDF)</a>
       </div>
     </section>
+
   </main>
 
-  <!-- Bottom CTA -->
-<section class="bottom-cta">
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kcaawu@yahoo.com&su=KCWU%20Membership%20Application"
-      class="member-box bottom-member"
-      target="_blank"
-    >
-      Become a Member
-    </a>
-</section>
-
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <div class="bottom-cta-inner">
+      <h2>Ready to Join KCWU?</h2>
+      <p>Become a member today and gain the protection and support you deserve.</p>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kcaawu@yahoo.com&su=KCWU%20Membership%20Application"
+         class="member-box" target="_blank">
+        ✉ Become a Member
+      </a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Kenya Chemical Workers Union</div>
+      <div class="footer-brand">KCWU</div>
+      <div>© <span id="year"></span> Kenya Chemical and Allied Workers' Union. All rights reserved.</div>
       <div class="footer-links"><a href="contact.html">Contact</a></div>
     </div>
   </footer>
