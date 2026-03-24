@@ -612,4 +612,71 @@ main {
     box-shadow: 0 12px 28px rgba(11,37,64,0.12);
 }
 
+/* Title styling */
+.leaders-title{
+text-align:center;
+font-size:34px;
+margin-bottom:60px;
+color:#0b3d91;
+}
+
+/* Grid */
+.leaders-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+/* Card */
+.leader-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+border:2px solid #e6eef7;
+}
+
+/* Image */
+.leader-card img{
+width:100%;
+height:420px;
+object-fit:cover;
+}
+
+/* Info */
+.leader-info{
+text-align:center;
+padding:20px;
+border-top:4px solid #0b3d91;
+}
+
+.leader-info h3{
+font-size:22px;
+color:#0b3d91;
+}
+
+.leader-info p{
+color:#444;
+}
+
+/* Hover */
+.leader-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.12);
+border-color:#0b3d91;
+}
+
+/* Animation (hidden state) */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+/* Show animation */
+.show{
+opacity:1;
+transform:translateY(0);
+}
 
