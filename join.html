@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join Us — KCWU</title>
+  <meta name="description" content="Become a member of the Kenya Chemical and Allied Workers' Union">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── JOIN PAGE SPECIFIC STYLES ── */
+    :root {
+      --join-bg: #f4f7fc;
+    }
+
+    /* HERO BANNER */
+    .join-hero {
+      background: linear-gradient(135deg, #08306b 0%, #0d3f87 55%, #0a2a5e 100%);
+      padding: 130px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .join-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    /* Diagonal gold slice */
+    .join-hero::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 60px;
+      background: var(--join-bg);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    }
+    .join-hero .container {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 60px;
+    }
+    .join-hero-text .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,146,42,0.2);
+      border: 1px solid rgba(201,146,42,0.5);
+      color: #f0c060; font-size: 12px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 30px; margin-bottom: 22px;
+    }
+    .join-hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; font-weight: 800; line-height: 1.12;
+      color: #fff; margin: 0 0 18px;
+    }
+    .join-hero-text h1 em {
+      font-style: italic; color: #f0c060;
+    }
+    .join-hero-text p {
+      color: rgba(255,255,255,0.8); font-size: 16px;
+      line-height: 1.7; margin-bottom: 28px; max-width: 440px;
+    }
+
+    /* BENEFITS MINI LIST in hero */
+    .hero-benefits {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .hero-benefit {
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,0.88); font-size: 15px;
+    }
+    .hero-benefit .tick {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(201,146,42,0.25);
+      border: 1.5px solid #c9922a;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+
+    /* HERO STATS BOX */
+    .hero-stats-box {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px; padding: 36px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+    }
+    .hstat { text-align: center; }
+    .hstat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; font-weight: 800; color: #f0c060; line-height: 1;
+    }
+    .hstat-label { color: rgba(255,255,255,0.65); font-size: 13px; margin-top: 4px; }
+
+    /* ── MAIN LAYOUT ── */
+    .join-main {
+      background: var(--join-bg);
+      padding: 70px 0 80px;
+    }
+    .join-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px; align-items: start;
+    }
+
+    /* ── BENEFITS SECTION (left) ── */
+    .benefits-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; color: #08306b;
+      margin: 0 0 8px;
+    }
+    .benefits-section .sub {
+      color: #6b7280; font-size: 15px; margin-bottom: 32px;
+    }
+    .benefit-cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      margin-bottom: 36px;
+    }
+    .benefit-card {
+      background: #fff; padding: 22px 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(8,48,107,0.08);
+      border-top: 3px solid #1167b1;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative; overflow: hidden;
+    }
+    .benefit-card::after {
+      content: '';
+      position: absolute; bottom: 0; right: 0;
+      width: 50px; height: 50px;
+      background: linear-gradient(135deg, transparent 50%, rgba(17,103,177,0.04) 50%);
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(8,48,107,0.13);
+    }
+    .benefit-icon {
+      font-size: 28px; margin-bottom: 10px; display: block;
+    }
+    .benefit-card h4 {
+      font-family: 'Playfair Display', serif;
+      color: #08306b; margin: 0 0 6px; font-size: 16px;
+    }
+    .benefit-card p {
+      color: #6b7280; font-size: 13px; line-height: 1.5; margin: 0;
+    }
+
+    /* TESTIMONIAL */
+    .testimonial-block {
+      background: linear-gradient(135deg, #08306b, #0d3f87);
+      border-radius: 16px; padding: 28px;
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .testimonial-block::before {
+      content: '\201C';
+      position: absolute; top: -10px; left: 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 120px; color: rgba(240,192,96,0.15);
+      line-height: 1;
+    }
+    .testimonial-block blockquote {
+      margin: 0 0 16px; font-size: 15px; line-height: 1.7;
+      color: rgba(255,255,255,0.9); position: relative; z-index: 1;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .author-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, #c9922a, #f0c060);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 16px; color: #fff;
+    }
+    .author-name { font-weight: 700; font-size: 14px; }
+    .author-role { font-size: 12px; color: rgba(255,255,255,0.6); }
+
+    /* HOW IT WORKS */
+    .how-it-works { margin-top: 36px; }
+    .how-it-works h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; color: #08306b; margin: 0 0 20px;
+    }
+    .steps-row {
+      display: flex; gap: 0; position: relative;
+    }
+    .steps-row::before {
+      content: '';
+      position: absolute; top: 20px; left: 20px; right: 20px;
+      height: 2px;
+      background: linear-gradient(90deg, #1167b1, #c9922a);
+      z-index: 0;
+    }
+    .step {
+      flex: 1; text-align: center; position: relative; z-index: 1;
+    }
+    .step-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, #08306b, #1167b1);
+      color: #fff; font-weight: 800; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 10px; border: 3px solid var(--join-bg);
+      box-shadow: 0 0 0 2px #1167b1;
+    }
+    .step p { font-size: 12px; color: #6b7280; line-height: 1.4; margin: 0; }
+    .step strong { display: block; font-size: 13px; color: #08306b; margin-bottom: 3px; }
+
+    /* ── FORM CARD (right) ── */
+    .form-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(8,48,107,0.12);
+      overflow: hidden;
+      position: sticky; top: 90px;
+    }
+    .form-card-header {
+      background: linear-gradient(135deg, #08306b, #1167b1);
+      padding: 28px 30px;
+      position: relative;
+    }
+    .form-card-header::after {
+      content: '';
+      position: absolute; bottom: -1px; left: 0; right: 0;
+      height: 20px;
+      background: #fff;
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .form-card-header h3 {
+      font-family: 'Playfair Display', serif;
+      color: #fff; margin: 0 0 4px; font-size: 22px;
+    }
+    .form-card-header p { color: rgba(255,255,255,0.75); font-size: 13px; margin: 0; }
+    .form-card-header .lock-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8);
+      font-size: 11px; padding: 4px 10px; border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    .form-body { padding: 32px 30px 30px; }
+
+    /* Progress bar */
+    .form-progress {
+      display: flex; gap: 6px; margin-bottom: 28px;
+    }
+    .progress-step {
+      flex: 1; height: 4px; border-radius: 2px;
+      background: #e8eef6;
+      transition: background 0.4s ease;
+    }
+    .progress-step.done { background: #1167b1; }
+    .progress-step.active { background: #c9922a; }
+
+    /* Form fields */
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: #08306b; letter-spacing: 0.5px;
+      text-transform: uppercase; margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 11px 14px;
+      border: 1.5px solid #d1dce8;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; color: #1a2e45;
+      background: #f9fbfe;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #1167b1;
+      box-shadow: 0 0 0 3px rgba(17,103,177,0.1);
+      background: #fff;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* Section divider in form */
+    .form-section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #c9922a;
+      border-bottom: 1px solid #f0e8d8;
+      padding-bottom: 8px; margin: 20px 0 14px;
+    }
+
+    /* Checkbox */
+    .form-checkbox {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin: 18px 0;
+    }
+    .form-checkbox input[type="checkbox"] {
+      width: 18px; height: 18px; margin-top: 1px;
+      accent-color: #1167b1; flex-shrink: 0;
+    }
+    .form-checkbox label {
+      font-size: 12px; color: #6b7280; line-height: 1.5;
+      text-transform: none; letter-spacing: 0; font-weight: 400;
+    }
+    .form-checkbox label a { color: #1167b1; }
+
+    /* Submit button */
+    .btn-submit {
+      width: 100%; padding: 15px;
+      background: linear-gradient(135deg, #c9922a, #b07a1a);
+      color: #fff; border: none; border-radius: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px; font-weight: 700; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      box-shadow: 0 8px 24px rgba(201,146,42,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative; overflow: hidden;
+    }
+    .btn-submit::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(201,146,42,0.45);
+    }
+    .btn-submit:active { transform: translateY(0); }
+
+    .form-note {
+      text-align: center; font-size: 12px; color: #9ca3af;
+      margin-top: 14px; line-height: 1.5;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none; text-align: center; padding: 20px 0;
+    }
+    .form-success .success-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, #08306b, #1167b1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; margin: 0 auto 16px;
+    }
+    .form-success h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; color: #08306b; margin: 0 0 8px;
+    }
+    .form-success p { color: #6b7280; font-size: 14px; }
+
+    /* ── WHY JOIN STRIP ── */
+    .why-strip {
+      background: linear-gradient(90deg, #08306b 0%, #0d3f87 100%);
+      padding: 50px 0;
+    }
+    .why-strip .container {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+      text-align: center;
+    }
+    .why-item { color: #fff; }
+    .why-icon { font-size: 36px; margin-bottom: 12px; display: block; }
+    .why-title { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 6px; color: #f0c060; }
+    .why-desc { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 70px 0; background: #fff; }
+    .faq-section .section-header { text-align: center; }
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      margin-top: 36px;
+    }
+    .faq-item {
+      border: 1.5px solid #e8eef6; border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .faq-item:hover { border-color: #1167b1; box-shadow: 0 4px 16px rgba(8,48,107,0.08); }
+    .faq-q {
+      padding: 18px 20px; font-weight: 600; font-size: 14px;
+      color: #08306b; cursor: pointer; user-select: none;
+      display: flex; justify-content: space-between; align-items: center;
+      background: #f9fbfe;
+    }
+    .faq-q .arrow {
+      font-size: 18px; color: #1167b1;
+      transition: transform 0.25s ease; flex-shrink: 0;
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      font-size: 14px; color: #6b7280; line-height: 1.6;
+      padding: 0 20px; background: #fff;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding: 14px 20px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .join-hero .container { grid-template-columns: 1fr; gap: 36px; }
+      .hero-stats-box { grid-template-columns: repeat(4,1fr); gap: 12px; }
+      .join-layout { grid-template-columns: 1fr; }
+      .form-card { position: static; }
+      .benefit-cards { grid-template-columns: 1fr 1fr; }
+      .why-strip .container { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .join-hero-text h1 { font-size: 32px; }
+      .hero-stats-box { grid-template-columns: 1fr 1fr; }
+      .benefit-cards { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .steps-row::before { display: none; }
+      .why-strip .container { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="KCWU Logo" class="site-logo">
+        <span class="brand-text">Kenya Chemical and Allied Workers' Union</span>
+      </a>
+      <nav id="mainNav" class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="join-hero">
+    <div class="container">
+      <div class="join-hero-text">
+        <div class="badge">✦ Membership Open</div>
+        <h1>Your Rights.<br><em>Our Fight.</em><br>Together.</h1>
+        <p>Joining KCWU means joining over 70 years of solidarity, negotiation, and progress for workers across Kenya's chemical and allied industries.</p>
+        <div class="hero-benefits">
+          <div class="hero-benefit"><span class="tick">✓</span> Fair wages & better working conditions</div>
+          <div class="hero-benefit"><span class="tick">✓</span> Legal protection & representation</div>
+          <div class="hero-benefit"><span class="tick">✓</span> Training, safety & empowerment</div>
+          <div class="hero-benefit"><span class="tick">✓</span> 12 branches across Kenya</div>
+        </div>
+      </div>
+      <div class="hero-stats-box">
+        <div class="hstat">
+          <div class="hstat-num">70+</div>
+          <div class="hstat-label">Years of Service</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">12</div>
+          <div class="hstat-label">Branch Offices</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">50+</div>
+          <div class="hstat-label">CBAs Signed</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">1954</div>
+          <div class="hstat-label">Year Founded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY STRIP -->
+  <section class="why-strip">
+    <div class="container">
+      <div class="why-item">
+        <span class="why-icon">⚖️</span>
+        <div class="why-title">Collective Bargaining</div>
+        <div class="why-desc">We negotiate directly with employers for better pay and conditions</div>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">🛡️</span>
+        <div class="why-title">Legal Protection</div>
+        <div class="why-desc">Court representation and disciplinary meeting support</div>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">📚</span>
+        <div class="why-title">Training & Skills</div>
+        <div class="why-desc">Shop steward seminars, safety workshops and more</div>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">🤝</span>
+        <div class="why-title">Solidarity Network</div>
+        <div class="why-desc">Thousands of members across 12 Kenyan branches</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="join-main">
+    <div class="container">
+      <div class="join-layout">
+
+        <!-- LEFT: BENEFITS + INFO -->
+        <div class="benefits-section">
+          <div class="title-underline"></div>
+          <h2>Why Become a Member?</h2>
+          <p class="sub">KCWU membership gives you real, tangible protection on the job — from day one.</p>
+
+          <div class="benefit-cards reveal-stagger">
+            <div class="benefit-card">
+              <span class="benefit-icon">💰</span>
+              <h4>Better Pay</h4>
+              <p>We negotiate Collective Bargaining Agreements that have consistently raised wages for our members.</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">🏥</span>
+              <h4>Workplace Safety</h4>
+              <p>We advocate for safe working environments in the chemical sector and fight against unsafe conditions.</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">🏛️</span>
+              <h4>Court Support</h4>
+              <p>If it ever comes to a tribunal or court, KCWU is in your corner with experienced representation.</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">📋</span>
+              <h4>Grievance Help</h4>
+              <p>We accompany you to disciplinary meetings and make sure your voice is heard by management.</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">🎓</span>
+              <h4>Training Access</h4>
+              <p>Members get access to shop steward seminars, safety workshops and skill-building programmes.</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">🌍</span>
+              <h4>Global Solidarity</h4>
+              <p>KCWU is connected to international labour movements fighting for workers' rights worldwide.</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL -->
+          <div class="testimonial-block reveal">
+            <blockquote>
+              "Joining KCWU was the best decision I made as a worker. When I faced an unfair dismissal, the union stood with me through the entire court process and we won. I would not have known my rights without them."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">JM</div>
+              <div>
+                <div class="author-name">John M.</div>
+                <div class="author-role">KCWU Member · Nairobi Branch</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOW IT WORKS -->
+          <div class="how-it-works reveal">
+            <h3>How Membership Works</h3>
+            <div class="steps-row">
+              <div class="step">
+                <div class="step-num">1</div>
+                <strong>Fill the Form</strong>
+                <p>Complete the application on this page</p>
+              </div>
+              <div class="step">
+                <div class="step-num">2</div>
+                <strong>Employer Deduction</strong>
+                <p>Your employer deducts dues from salary</p>
+              </div>
+              <div class="step">
+                <div class="step-num">3</div>
+                <strong>Confirmation</strong>
+                <p>You receive your member confirmation</p>
+              </div>
+              <div class="step">
+                <div class="step-num">4</div>
+                <strong>Full Benefits</strong>
+                <p>You're protected and represented</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div class="form-card reveal">
+          <div class="form-card-header">
+            <h3>Membership Application</h3>
+            <p>Complete the form below to apply</p>
+            <div class="lock-badge">🔒 Your information is kept confidential</div>
+          </div>
+
+          <div class="form-body">
+            <div class="form-progress">
+              <div class="progress-step done" id="p1"></div>
+              <div class="progress-step done" id="p2"></div>
+              <div class="progress-step active" id="p3"></div>
+            </div>
+
+            <form id="memberForm" novalidate>
+
+              <div class="form-section-title">Personal Information</div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name *</label>
+                  <input type="text" id="fname" name="fname" placeholder="e.g. John" required>
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name *</label>
+                  <input type="text" id="lname" name="lname" placeholder="e.g. Mwangi" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="id_number">National ID Number *</label>
+                <input type="text" id="id_number" name="id_number" placeholder="e.g. 12345678" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="you@email.com">
+                </div>
+              </div>
+
+              <div class="form-section-title">Employment Details</div>
+
+              <div class="form-group">
+                <label for="employer">Employer / Company Name *</label>
+                <input type="text" id="employer" name="employer" placeholder="e.g. BOC Kenya Ltd" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="job_title">Job Title *</label>
+                  <input type="text" id="job_title" name="job_title" placeholder="e.g. Factory Operator" required>
+                </div>
+                <div class="form-group">
+                  <label for="branch">Nearest KCWU Branch *</label>
+                  <select id="branch" name="branch" required>
+                    <option value="" disabled selected>Select branch</option>
+                    <option>Nairobi</option>
+                    <option>Bamburi</option>
+                    <option>Nakuru</option>
+                    <option>Gilgil</option>
+                    <option>Thika</option>
+                    <option>Athi River</option>
+                    <option>Kisumu</option>
+                    <option>Ruiru</option>
+                    <option>Ruaraka</option>
+                    <option>Changamwe – Kwa Jomvu</option>
+                    <option>Mombasa Island</option>
+                    <option>Muhoroni</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Additional Information (Optional)</label>
+                <textarea id="message" name="message" placeholder="Any questions or comments for the KCWU team..."></textarea>
+              </div>
+
+              <div class="form-checkbox">
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I confirm that I am a unionisable employee and agree to the KCWU membership terms. I understand that subscription fees will be deducted from my salary via check-off agreement. <a href="#">View terms</a></label>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                ✦ Submit My Application
+              </button>
+
+              <p class="form-note">By submitting, you'll receive a confirmation email at <strong>kcaawu@yahoo.com</strong>. We will contact you within 2–3 business days.</p>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon">✓</div>
+              <h4>Application Received!</h4>
+              <p>Thank you for applying to join KCWU. Our team will review your application and contact you within 2–3 business days. Welcome to the union family!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <div class="title-underline"></div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about joining KCWU</p>
+      </div>
+      <div class="faq-grid reveal-stagger">
+
+        <div class="faq-item">
+          <div class="faq-q">Who is eligible to join KCWU? <span class="arrow">›</span></div>
+          <div class="faq-a">Any unionisable employee working in the chemical and allied industries in Kenya can join KCWU. This includes workers in manufacturing, cleaning, processing, and related sectors.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How much are the membership dues? <span class="arrow">›</span></div>
+          <div class="faq-a">Membership subscription fees are prescribed by the union and automatically deducted from your salary through a check-off agreement with your employer. Contact your nearest branch for the exact current amount.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What happens after I submit this form? <span class="arrow">›</span></div>
+          <div class="faq-a">Your application will be sent directly to the KCWU secretariat. Our team will review it and contact you within 2–3 business days to guide you through the check-off agreement process with your employer.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Can I join if my employer is not yet a signatory? <span class="arrow">›</span></div>
+          <div class="faq-a">Yes. You can still apply and KCWU will work with you to establish a recognition agreement with your employer. Many of our members joined before their employer formally recognised the union.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Is my personal information kept safe? <span class="arrow">›</span></div>
+          <div class="faq-a">Absolutely. Your personal data is only used for membership processing and is never shared with your employer or third parties without your consent.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What if I have a grievance before I'm fully registered? <span class="arrow">›</span></div>
+          <div class="faq-a">Contact us immediately at +254 702 147 082 or kcaawu@yahoo.com. We will advise you and provide guidance even while your application is being processed.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">KCWU</div>
+      <div>© <span id="year"></span> Kenya Chemical and Allied Workers' Union. All rights reserved.</div>
+      <div class="footer-links"><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/254702147082" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ── FAQ ACCORDION ──
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // ── FORM SUBMIT → FORMSPREE ──────────────────────────────────────
+    // HOW TO ACTIVATE:
+    //   1. Go to https://formspree.io/register — sign up free with jimmiejonathan110@gmail.com
+    //   2. Click "+ New Form", name it "KCWU Membership", set email to jimmiejonathan110@gmail.com
+    //   3. Copy your form endpoint — looks like: https://formspree.io/f/xabcdefg
+    //   4. Paste it below replacing YOUR_FORMSPREE_ENDPOINT
+    // ─────────────────────────────────────────────────────────────────
+    const FORMSPREE_URL = "https://formspree.io/f/maqkwywd";
+
+    document.getElementById('memberForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fname    = document.getElementById('fname').value.trim();
+      const lname    = document.getElementById('lname').value.trim();
+      const idNum    = document.getElementById('id_number').value.trim();
+      const phone    = document.getElementById('phone').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const employer = document.getElementById('employer').value.trim();
+      const jobTitle = document.getElementById('job_title').value.trim();
+      const branch   = document.getElementById('branch').value;
+      const message  = document.getElementById('message').value.trim();
+      const agree    = document.getElementById('agree').checked;
+
+      // Validation
+      if (!fname || !lname || !idNum || !phone || !employer || !jobTitle || !branch) {
+        alert('Please fill in all required fields marked with *');
+        return;
+      }
+      if (!agree) {
+        alert('Please agree to the membership terms to continue.');
+        return;
+      }
+
+      // Button loading state
+      const btn = document.querySelector('.btn-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+
+      // POST to Formspree — they email you every submission instantly
+      fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          'Full Name':      fname + ' ' + lname,
+          'National ID':    idNum,
+          'Phone':          phone,
+          'Email':          email    || 'Not provided',
+          'Employer':       employer,
+          'Job Title':      jobTitle,
+          'Branch':         branch,
+          'Notes':          message  || 'None',
+          '_replyto':       email,   // Formspree: sets reply-to on the email
+          '_subject':       'New KCWU Membership Application — ' + fname + ' ' + lname
+        })
+      })
+      .then(function(res) {
+        if (res.ok) {
+          document.getElementById('memberForm').style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          throw new Error('Server error ' + res.status);
+        }
+      })
+      .catch(function() {
+        btn.textContent = '✦ Submit My Application';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        alert('There was a connection problem. Please try again or call us on +254 702 147 082.');
+      });
+    });
+  </script>
+</body>
+</html>
